@@ -1,0 +1,6 @@
+[wrap-file]
+directory = node-23.10.0
+source_url = https://github.com/nodejs/node/archive/refs/tags/v23.10.0.tar.gz
+source_hash = 6aacd739b6ee66bf37d237950488cdfac3b6ad53012a8ccc95006afb47022fb0
+source_filename = node-23.10.0.tar.gz
+patch_directory = node

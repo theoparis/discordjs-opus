@@ -3,18 +3,13 @@ import { readdir } from 'node:fs/promises';
 import { arch } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import type { OpusEncoder as OpusEncoderType } from '../typings';
 
 const require = createRequire(import.meta.url);
 const __dirname = resolve(fileURLToPath(import.meta.url), '..');
 
-/**
- * Find the node addon file based on the platform and architecture
- * @param {string} dir
- * @param {string} library
- * @returns {Promise<string>}
- */
-const find = async (dir, library) => {
-	let platform = process.platform;
+const find = async (dir: string, library: string): Promise<string> => {
+	let platform: string = process.platform;
 	let architecture = arch();
 
 	if (process.platform != 'darwin' && process.arch == 'arm64') {
@@ -44,8 +39,6 @@ const find = async (dir, library) => {
 };
 
 // eslint-disable-next-line import/no-dynamic-require
-const lib = require(
-	await find(resolve(__dirname, '..', 'build', 'lib'), 'node-opus'),
-);
+const lib = require(await find(resolve(__dirname, '..', 'dist'), 'node-opus'));
 
-export const OpusEncoder = lib.OpusEncoder;
+export const OpusEncoder: typeof OpusEncoderType = lib.OpusEncoder;

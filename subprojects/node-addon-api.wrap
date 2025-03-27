@@ -1,0 +1,9 @@
+[wrap-file]
+directory = node-addon-api-8.3.1 
+source_url = https://github.com/nodejs/node-addon-api/archive/v8.3.1.tar.gz
+source_hash = 16aa87cdf2f86f185ef4927cf525c01bc19138465f0dcf6ef7f66c5a985d671d 
+source_filename = node-addon-api-8.3.1.tar.gz
+patch_directory = node-addon-api
+
+[provide]
+dependency_names = node_addon_api

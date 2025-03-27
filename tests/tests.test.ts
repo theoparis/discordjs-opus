@@ -1,9 +1,9 @@
 import assert from 'node:assert';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { OpusEncoder } from '../lib/index.mjs';
+import { OpusEncoder } from '../lib';
 import { fileURLToPath } from 'node:url';
-import { test } from 'node:test';
+import { test } from 'bun:test';
 
 test('decode', () => {
 	const __dirname = join(fileURLToPath(import.meta.url), '..');
