@@ -1,4 +1,5 @@
 import { arch } from 'node:os';
+import { getDtsBunPlugin } from './dtsPlugin';
 
 // TODO: support building for multiple platforms
 process.env.CC = 'clang';
@@ -32,10 +33,12 @@ if (process.platform == 'win32') {
 
 await Bun.build({
 	entrypoints: ['./lib/index.ts'],
+	root: 'lib',
 	outdir: './dist',
 	format: 'esm',
 	minify: process.env.NODE_ENV === 'production',
 	target: 'node',
+	plugins: [getDtsBunPlugin()],
 });
 
 const file = Bun.file('build/node-opus.node');

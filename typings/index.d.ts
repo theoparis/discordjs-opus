@@ -1,4 +1,4 @@
-export declare const OpusEncoder: {
+export const OpusEncoder: {
 	new (rate: number, channels: number): typeof OpusEncoder;
 	encode(buffer: Buffer): Buffer;
 	/**
