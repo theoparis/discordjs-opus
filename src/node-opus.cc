@@ -1,5 +1,3 @@
-#include "napi.h"
-#include "../deps/opus/include/opus.h"
 #include "node-opus.h"
 
 using namespace Napi;

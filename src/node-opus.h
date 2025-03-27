@@ -1,3 +1,6 @@
+#include <napi.h>
+#include <opus.h>
+
 using namespace Napi;
 
 #define FRAME_SIZE 960
