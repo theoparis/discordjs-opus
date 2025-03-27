@@ -6,8 +6,12 @@ process.env.CXX = 'clang++';
 process.env.AR = 'llvm-ar';
 process.env.RANLIB = 'llvm-ranlib';
 process.env.LDFLAGS = '-fuse-ld=lld';
-await Bun.spawn(['meson', 'setup', '--reconfigure', 'build']).exited;
-await Bun.spawn(['meson', 'compile', '-C', 'build']).exited;
+await Bun.spawn(['meson', 'setup', '--reconfigure', 'build'], {
+	stdio: ['inherit', 'inherit', 'inherit'],
+}).exited;
+await Bun.spawn(['meson', 'compile', '-C', 'build'], {
+	stdio: ['inherit', 'inherit', 'inherit'],
+}).exited;
 
 let platform: string = process.platform;
 let architecture = arch();

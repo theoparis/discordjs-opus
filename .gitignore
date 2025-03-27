@@ -8,3 +8,5 @@ node_modules/
 !/subprojects/packagefiles
 !/subprojects/*.wrap
 .cache/
+result
+result-*

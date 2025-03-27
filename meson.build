@@ -10,6 +10,7 @@ project(
         'warning_level=3',
         'b_lto=true',
         'b_pch=true',
+        'b_staticpic=true',
         'buildtype=debugoptimized',
         'opus:tests=disabled',
     ],

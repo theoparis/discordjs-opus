@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1743045408,
+        "narHash": "sha256-mpDbGs9uzNlZON04LRFwcprnMvkKTzJSxYN4JjR2dkI=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "5b8ffb57aea5cc1a779d5291dd82ca2f89b63a6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "node-addon-api": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740154329,
+        "narHash": "sha256-VnE+sAJTjdHvOBS1cdxFuql9Mi5W/O1ENDg9CLguhZI=",
+        "owner": "nodejs",
+        "repo": "node-addon-api",
+        "rev": "723f094374bc3ae9bd94d9bcc4b44604c70a5425",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nodejs",
+        "ref": "v8.3.1",
+        "repo": "node-addon-api",
+        "type": "github"
+      }
+    },
+    "node-api-headers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737130131,
+        "narHash": "sha256-mG2h3c0/nu6czDApx4/uC6u2TCwNUELzK3AXWrytZ/U=",
+        "owner": "nodejs",
+        "repo": "node-api-headers",
+        "rev": "d46edabd5bbacc08393578eb19fc2eba7021b597",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nodejs",
+        "ref": "v1.5.0",
+        "repo": "node-api-headers",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "node-addon-api": "node-addon-api",
+        "node-api-headers": "node-api-headers",
+        "systems": "systems"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
